@@ -16,6 +16,9 @@ namespace Projeto06.Data.Mappings
             builder.HasIndex(s => s.Nome)
                .IsUnique();
 
+            builder.Property(s => s.Preco)
+                .HasPrecision(18, 2);
+
         }
     }
 }

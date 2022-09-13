@@ -13,6 +13,10 @@ namespace Projeto06.Data.Mappings
     {
         public void Configure(EntityTypeBuilder<Atendimento> builder)
         {
+
+            builder.Property(a => a.Valor)
+                .HasPrecision(18, 2);
+
             #region Relacionamento 1pN
 
             builder.HasOne(a => a.Cliente)
